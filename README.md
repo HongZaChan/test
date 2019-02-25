@@ -23,7 +23,7 @@ This documentation is accurate as of Grit 2.0.
 * git (http://git-scm.com) tested with 1.6.0.2
 
 
-## Install ##################################################################
+## Ins ##################################################################
 
 Easiest install is via RubyGems:
 
@@ -116,28 +116,28 @@ The above will return commits 21-30 from the commit list.
 `Commit` objects contain information about that commit.
 
     head = repo.commits.first
-
+    
     head.id
     # => "e80bbd2ce67651aa18e57fb0b43618ad4baf7750"
-
+    
     head.parents
     # => [#<Grit::Commit "91169e1f5fa4de2eaea3f176461f5dc784796769">]
-
+    
     head.tree
     # => #<Grit::Tree "3536eb9abac69c3e4db583ad38f3d30f8db4771f">
-
+    
     head.author
     # => #<Grit::Actor "Tom Preston-Werner <tom@mojombo.com>">
-
+    
     head.authored_date
     # => Wed Oct 24 22:02:31 -0700 2007
-
+    
     head.committer
     # => #<Grit::Actor "Tom Preston-Werner <tom@mojombo.com>">
-
+    
     head.committed_date
     # => Wed Oct 24 22:02:31 -0700 2007
-
+    
     head.message
     # => "add Actor inspect"
 
@@ -155,7 +155,7 @@ the root tree of the latest commit on the **master** branch.
 
     tree = repo.commits.first.tree
     # => #<Grit::Tree "3536eb9abac69c3e4db583ad38f3d30f8db4771f">
-
+    
     tree.id
     # => "3536eb9abac69c3e4db583ad38f3d30f8db4771f"
 
@@ -173,7 +173,7 @@ attributes.
 
     contents.last.name
     # => "lib"
-
+    
     contents.last.mode
     # => "040000"
 
@@ -187,7 +187,7 @@ You can also get a tree directly from the repo if you know its name.
 
     repo.tree
     # => #<Grit::Tree "master">
-
+    
     repo.tree("91169e1f5fa4de2eaea3f176461f5dc784796769")
     # => #<Grit::Tree "91169e1f5fa4de2eaea3f176461f5dc784796769">
 
@@ -203,13 +203,13 @@ A blob has certain attributes.
 
     blob.id
     # => "4ebc8aea50e0a67e000ba29a30809d0a7b9b2666"
-
+    
     blob.name
     # => "README.txt"
-
+    
     blob.mode
     # => "100644"
-
+    
     blob.size
     # => 7726
 
